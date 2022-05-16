@@ -10,16 +10,12 @@ public class CopyRead {
 			// apre il file in lettura
 			FileReader filein = new FileReader("C:/corso/provaFile/ciao.txt");
 
-			int next;
-			do {
-				next = filein.read(); // legge il prossimo carattere
-
-				if (next != -1) { // se non e' finito il file
-					char nextc = (char) next;
-					System.out.print(nextc); // stampa il carattere
-				}
-
-			} while (next != -1);
+			BufferedReader reader = new BufferedReader(filein);
+			String in = reader.readLine();
+			while(in != null) {
+				System.out.println(in);
+				in = reader.readLine();
+			}
 
 			filein.close(); // chiude il file
 
