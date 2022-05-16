@@ -1,4 +1,4 @@
-package provafile;
+package it.prova.provafile.test;
 
 import java.io.FileWriter;
 import java.io.IOException;
